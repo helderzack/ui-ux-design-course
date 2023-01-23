@@ -40,7 +40,7 @@
       header {
         padding: 30px;
         width: 85%;
-        margin: auto;
+        margin: 0 auto 40px auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -133,9 +133,11 @@
         gap: 10px;
       }
 
-      .workforce-container > span {
+      .workforce-container > h2 {
+        margin: 0;
         font-size: 32px;
         font-family: "Poppins", sans-serif;
+        font-weight: normal;
       }
 
       .workforce-container > p {
@@ -219,9 +221,9 @@
   </head>
   <body>
     <header>
-      <section class="company-logo-section">
+      <div class="company-logo-section">
         <img src="images/fauxica.svg" alt="Fauxica Company Logo" />
-      </section>
+      </div>
       <nav>
         <a href="#">Home</a>
         <a href="#">Products</a>
@@ -230,7 +232,7 @@
       </nav>
     </header>
     <main class="hero">
-      <section class="company-description">
+      <div class="company-description">
         <section class="heading">
           <h1>Quality apparel without the price tag</h1>
           <p>
@@ -238,23 +240,23 @@
             premium apparel is made from the same stuff.
           </p>
         </section>
-        <section class="actions">
+        <div class="actions">
           <button type="button" class="primary-action">
             Browse our collection
           </button>
           <button type="button" class="secondary-action">
             Spring '23 Collection &#8594;
           </button>
-        </section>
+        </div>
         <section class="workforce-container">
-          <span>50K</span>
+          <h2>50K</h2>
           <p>
             We’re proud to announce that we now employ a workforce of over
             <strong>50,000</strong>. It’s all possible because of you.
           </p>
         </section>
-      </section>
-      <section class="product-images">
+      </div>
+      <div class="product-images">
         <div>
           <div class="product-container shoes-container">
             <div class="product-description-card">
@@ -286,7 +288,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   </body>
 </html>
