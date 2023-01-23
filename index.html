@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fauxica Sports</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/icon" href="images/fauxica.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+      }
+
+      :root {
+        --text-black: #000;
+        --text-white: #fff;
+        --primary-action: #f1e2d1;
+        --primary-action-hover: #e4d2bc;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      header {
+        padding: 30px;
+        width: 85%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .company-logo-section > img {
+        margin: 0;
+      }
+
+      nav {
+        margin-right: 40px;
+        display: flex;
+        gap: 40px;
+      }
+
+      nav > a {
+        text-decoration: none;
+        font-family: "Poppins", sans-serif;
+        color: var(--text-black);
+        text-transform: uppercase;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        margin: auto;
+        gap: 80px;
+      }
+
+      .company-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 50px;
+      }
+
+      .heading > h1 {
+        margin: 0;
+        font-size: 52px;
+        font-family: "Playfair Display", serif;
+        font-weight: normal;
+      }
+
+      .heading > p {
+        margin-top: 20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: lighter;
+        font-size: 18px;
+      }
+
+      .actions > button {
+        border: none;
+        font-size: 18px;
+        padding: 10px;
+        border-radius: 8px;
+        transition: all 3s ease-out;
+      }
+
+      .actions > button:hover {
+        cursor: pointer;
+      }
+
+      .primary-action {
+        background-color: var(--primary-action);
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+      }
+
+      .primary-action:hover {
+        background-color: var(--primary-action-hover);
+      }
+
+      .secondary-action {
+        background-color: var(--text-white);
+        font-family: "Poppins", sans-serif;
+        font-weight: lighter;
+      }
+
+      .secondary-action:hover {
+        text-decoration: underline;
+      }
+
+      .workforce-container {
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 8px;
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .workforce-container > span {
+        font-size: 32px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .workforce-container > p {
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+      }
+
+      .product-images {
+        display: flex;
+        gap: 20px;
+      }
+
+      .product-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 284px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px;
+      }
+
+      .smaller-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .shoes-container {
+        background-image: url("images/shoes.jpg");
+        height: 520px;
+      }
+
+      .sweater-container {
+        height: 250px;
+        background-image: url("images/sweater.jpg");
+      }
+
+      .jacket-container {
+        background-image: url("images/jacket.jpg");
+        height: 250px;
+      }
+
+      .product-description-card {
+        display: flex;
+        width: 250px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        margin: 0 16px 16px;
+        background-color: var(--text-white);
+        border-radius: 5px;
+      }
+
+      .product-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2px;
+      }
+
+      .product-name {
+        font-size: 16px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+      }
+
+      .product-info {
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        font-weight: lighter;
+      }
+
+      .product-price {
+        font-size: 18px;
+        font-family: "Poppins", sans-serif;
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <section class="company-logo-section">
+        <img src="images/fauxica.svg" alt="Fauxica Company Logo" />
+      </section>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <main class="hero">
+      <section class="company-description">
+        <section class="heading">
+          <h1>Quality apparel without the price tag</h1>
+          <p>
+            No need to spend $xxx on apparel just for the name’s sake. Our
+            premium apparel is made from the same stuff.
+          </p>
+        </section>
+        <section class="actions">
+          <button type="button" class="primary-action">
+            Browse our collection
+          </button>
+          <button type="button" class="secondary-action">
+            Spring '23 Collection &#8594;
+          </button>
+        </section>
+        <section class="workforce-container">
+          <span>50K</span>
+          <p>
+            We’re proud to announce that we now employ a workforce of over
+            <strong>50,000</strong>. It’s all possible because of you.
+          </p>
+        </section>
+      </section>
+      <section class="product-images">
+        <div>
+          <div class="product-container shoes-container">
+            <div class="product-description-card">
+              <div class="product-description">
+                <span class="product-name">Fauxica Sport</span>
+                <span class="product-info">Running Shoes</span>
+              </div>
+              <span class="product-price">$49</span>
+            </div>
+          </div>
+        </div>
+        <div class="smaller-container">
+          <div class="product-container sweater-container">
+            <div class="product-description-card">
+              <div class="product-description">
+                <span class="product-name">Pure Sweater</span>
+                <span class="product-info">Regular Sweater</span>
+              </div>
+              <span class="product-price">$20</span>
+            </div>
+          </div>
+          <div class="product-container jacket-container">
+            <div class="product-description-card">
+              <div class="product-description">
+                <span class="product-name">Jacket</span>
+                <span class="product-info">IT'S THE JACKEET!</span>
+              </div>
+              <span class="product-price">$30</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
