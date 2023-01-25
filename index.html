@@ -16,6 +16,10 @@
       rel="stylesheet"
     />
     <style>
+      html {
+        font-size: 62.5%;
+      }
+
       * {
         box-sizing: border-box;
       }
@@ -24,6 +28,7 @@
         margin: 0;
         width: 100%;
         height: 100vh;
+        font-family: "Poppins", sans-serif;
       }
 
       :root {
@@ -31,34 +36,34 @@
         --text-white: #fff;
         --primary-action: #f1e2d1;
         --primary-action-hover: #e4d2bc;
+        --hover-gray: #f2f2f2;
       }
 
+      .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
       p {
         margin: 0;
       }
 
       header {
-        padding: 30px;
-        width: 85%;
-        margin: 0 auto 40px auto;
+        padding: 3rem 0;
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
       }
 
-      .company-logo-section > img {
-        margin: 0;
-      }
-
-      nav {
-        margin-right: 40px;
+      ul {
+        list-style: none;
         display: flex;
-        gap: 40px;
+        gap: 4rem;
       }
 
-      nav > a {
+      li > a {
         text-decoration: none;
-        font-family: "Poppins", sans-serif;
+        font-size: 1.6rem;
         color: var(--text-black);
         text-transform: uppercase;
       }
@@ -66,47 +71,47 @@
       .hero {
         display: flex;
         align-items: center;
-        width: 70%;
-        margin: auto;
-        gap: 80px;
+        gap: 8rem;
+        margin: 6rem 0;
       }
 
       .company-description {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 50px;
+        gap: 5rem;
       }
 
       .heading > h1 {
         margin: 0;
-        font-size: 52px;
+        font-size: 5.2rem;
         font-family: "Playfair Display", serif;
         font-weight: normal;
       }
 
       .heading > p {
-        margin-top: 20px;
-        font-family: "Poppins", sans-serif;
+        margin-top: 2rem;
         font-weight: lighter;
-        font-size: 18px;
+        font-size: 1.8rem;
       }
 
-      .actions > button {
+      .actions {
+        display: flex;
+        gap: 3rem;
+      }
+
+      .actions > a {
+        text-decoration: none;
+        color: var(--text-black);
         border: none;
-        font-size: 18px;
-        padding: 10px;
+        font-size: 1.8rem;
+        padding: 1rem;
         border-radius: 8px;
-        transition: all 3s ease-out;
-      }
-
-      .actions > button:hover {
-        cursor: pointer;
+        transition: all 1s ease-out;
       }
 
       .primary-action {
         background-color: var(--primary-action);
-        font-family: "Poppins", sans-serif;
         font-weight: bold;
       }
 
@@ -116,78 +121,88 @@
 
       .secondary-action {
         background-color: var(--text-white);
-        font-family: "Poppins", sans-serif;
         font-weight: lighter;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .secondary-action > svg {
+        width: 2rem;
       }
 
       .secondary-action:hover {
         text-decoration: underline;
+        gap: 1.5rem;
       }
 
       .workforce-container {
         border: 1px solid black;
-        padding: 20px;
+        padding: 4rem;
         border-radius: 8px;
         display: flex;
         align-items: flex-start;
-        gap: 10px;
+        gap: 1rem;
       }
 
       .workforce-container > h2 {
         margin: 0;
-        font-size: 32px;
-        font-family: "Poppins", sans-serif;
+        font-size: 3.2rem;
         font-weight: normal;
       }
 
       .workforce-container > p {
-        font-family: "Poppins", sans-serif;
-        font-size: 16px;
+        font-size: 1.6rem;
       }
 
       .product-images {
         display: flex;
-        gap: 20px;
+        gap: 2rem;
       }
 
       .product-container {
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        width: 284px;
+        width: 28.4rem;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 8px;
+        transition: background-size 2s ease-in-out;
+      }
+
+      .product-container:hover {
+        background-size: 150%;
       }
 
       .smaller-container {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 2rem;
       }
 
       .shoes-container {
         background-image: url("images/shoes.jpg");
-        height: 520px;
+        height: 52rem;
       }
 
       .sweater-container {
-        height: 250px;
+        height: 25rem;
         background-image: url("images/sweater.jpg");
       }
 
       .jacket-container {
         background-image: url("images/jacket.jpg");
-        height: 250px;
+        height: 25rem;
       }
 
       .product-description-card {
         display: flex;
-        width: 250px;
+        width: 25rem;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
-        margin: 0 16px 16px;
+        padding: 1rem;
+        margin: 0 1.6rem 1.6rem;
         background-color: var(--text-white);
         border-radius: 5px;
       }
@@ -197,67 +212,98 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
-        gap: 2px;
+        gap: 0.2rem;
       }
 
       .product-name {
-        font-size: 16px;
-        font-family: "Poppins", sans-serif;
+        font-size: 1.6rem;
         font-weight: bold;
       }
 
       .product-info {
-        font-size: 14px;
-        font-family: "Poppins", sans-serif;
+        font-size: 1.4rem;
         font-weight: lighter;
       }
 
       .product-price {
-        font-size: 18px;
-        font-family: "Poppins", sans-serif;
+        font-size: 1.8rem;
         font-weight: lighter;
+      }
+
+      footer {
+        margin: 4rem auto 0 auto;
+        width: 50rem;
+      }
+
+      .footer-link {
+        width: 20rem;
+        margin: 0;
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-link > a {
+        margin: 0;
+        text-decoration: none;
+        color: var(--text-black);
+      }
+
+      .footer-link:hover {
+        background-color: var(--hover-gray);
+      }
+
+      .footer-link > img {
+        margin: 0;
+        width: 3.2rem;
+        height: 3.2rem;
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="company-logo-section">
-        <img src="images/fauxica.svg" alt="Fauxica Company Logo" />
-      </div>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-    <main class="hero">
-      <div class="company-description">
-        <section class="heading">
-          <h1>Quality apparel without the price tag</h1>
-          <p>
-            No need to spend $xxx on apparel just for the name’s sake. Our
-            premium apparel is made from the same stuff.
-          </p>
-        </section>
-        <div class="actions">
-          <button type="button" class="primary-action">
-            Browse our collection
-          </button>
-          <button type="button" class="secondary-action">
-            Spring '23 Collection &#8594;
-          </button>
+    <div class="wrapper">
+      <header>
+        <a href="#"
+          ><img src="images/fauxica.svg" alt="Fauxica Company Logo"
+        /></a>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="hero">
+        <div class="company-description">
+          <section class="heading">
+            <h1>Quality apparel without the price tag</h1>
+            <p>
+              No need to spend $xxx on apparel just for the name’s sake. Our
+              premium apparel is made from the same stuff.
+            </p>
+          </section>
+          <div class="actions">
+            <a href="#" class="primary-action">Browse our collection</a>
+            <a href="#" class="secondary-action">
+              <span>Spring '23 Collection</span>
+              <svg viewBox="0 0 19 8" fill="none">
+                <path
+                  d="M18.3536 4.35355C18.5488 4.15829 18.5488 3.84171 18.3536 3.64645L15.1716 0.464466C14.9763 0.269204 14.6597 0.269204 14.4645 0.464466C14.2692 0.659728 14.2692 0.976311 14.4645 1.17157L17.2929 4L14.4645 6.82843C14.2692 7.02369 14.2692 7.34027 14.4645 7.53553C14.6597 7.7308 14.9763 7.7308 15.1716 7.53553L18.3536 4.35355ZM0 4.5H18V3.5L0 3.5L0 4.5Z"
+                  fill="black"
+                />
+              </svg>
+            </a>
+          </div>
+          <section class="workforce-container">
+            <h2>50K</h2>
+            <p>
+              We’re proud to announce that we now employ a workforce of over
+              <strong>50,000</strong>. It’s all possible because of you.
+            </p>
+          </section>
         </div>
-        <section class="workforce-container">
-          <h2>50K</h2>
-          <p>
-            We’re proud to announce that we now employ a workforce of over
-            <strong>50,000</strong>. It’s all possible because of you.
-          </p>
-        </section>
-      </div>
-      <div class="product-images">
-        <div>
+        <div class="product-images">
           <div class="product-container shoes-container">
             <div class="product-description-card">
               <div class="product-description">
@@ -267,28 +313,28 @@
               <span class="product-price">$49</span>
             </div>
           </div>
-        </div>
-        <div class="smaller-container">
-          <div class="product-container sweater-container">
-            <div class="product-description-card">
-              <div class="product-description">
-                <span class="product-name">Pure Sweater</span>
-                <span class="product-info">Regular Sweater</span>
+          <div class="smaller-container">
+            <div class="product-container sweater-container">
+              <div class="product-description-card">
+                <div class="product-description">
+                  <span class="product-name">Pure Sweater</span>
+                  <span class="product-info">Regular Sweater</span>
+                </div>
+                <span class="product-price">$20</span>
               </div>
-              <span class="product-price">$20</span>
+            </div>
+            <div class="product-container jacket-container">
+              <div class="product-description-card">
+                <div class="product-description">
+                  <span class="product-name">Jacket</span>
+                  <span class="product-info">IT'S THE JACKEET!</span>
+                </div>
+                <span class="product-price">$30</span>
+              </div>
             </div>
           </div>
-          <div class="product-container jacket-container">
-            <div class="product-description-card">
-              <div class="product-description">
-                <span class="product-name">Jacket</span>
-                <span class="product-info">IT'S THE JACKEET!</span>
-              </div>
-              <span class="product-price">$30</span>
-            </div>
-          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
   </body>
 </html>
