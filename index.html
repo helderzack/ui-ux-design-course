@@ -74,58 +74,22 @@
       nav > ul > li > a::before {
         position: absolute;
         content: "";
-      }
-      nav > ul > li > a.active::before {
-        width: 35%;
+        width: 0;
         height: 1px;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid #8c8c8c;
         bottom: -6px;
+        transition: width 0.5s ease-out;
       }
 
-      a.inactive::before {
-        animation-duration: 1s;
-        animation-name: link-leave;
-        animation-fill-mode: forwards;
+      nav > ul > li > a.active::before {
+        width: 1.7rem;
+        border-bottom: 2px solid black;
       }
 
-      a.inactive:hover::before {
-        animation-duration: 1s;
-        animation-name: link-hover;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
+      nav > ul > li > a.inactive:hover::before {
+        width: 1.7rem;
       }
 
-      @keyframes link-hover {
-        from {
-          width: 0%;
-          height: 0;
-          border-bottom: 2px solid #8c8c8c;
-          bottom: -6px;
-        }
-
-        to {
-          width: 35%;
-          height: 1px;
-          border-bottom: 2px solid #8c8c8c;
-          bottom: -6px;
-        }
-      }
-
-      @keyframes link-leave {
-        from {
-          width: 35%;
-          height: 1px;
-          border-bottom: 2px solid #8c8c8c;
-          bottom: -6px;
-        }
-
-        to {
-          width: 0%;
-          height: 0;
-          border-bottom: 2px solid #8c8c8c;
-          bottom: -6px;
-        }
-      }
       .hero {
         display: flex;
         align-items: center;
@@ -164,8 +128,8 @@
         border: none;
         font-size: 1.8rem;
         padding: 1rem;
-        border-radius: 8px;
-        transition: all 1s ease-out;
+        border-radius: 0.8rem;
+        transition: all 0.5s ease-out;
       }
 
       .primary-action {
@@ -178,6 +142,7 @@
       }
 
       .secondary-action {
+        position: relative;
         background-color: var(--text-white);
         font-weight: lighter;
         display: flex;
@@ -189,18 +154,41 @@
         width: 2rem;
       }
 
+      .secondary-action::before {
+        position: absolute;
+        width: 0;
+        content: "";
+        height: 1px;
+        border-bottom: 1px solid black;
+        bottom: 0px;
+        transition: width 0.5s ease-out;
+      }
+
       .secondary-action:hover {
-        text-decoration: underline;
         gap: 1.5rem;
+      }
+
+      .secondary-action:hover::before {
+        width: 20rem;
       }
 
       .workforce-container {
         border: 1px solid black;
         padding: 4rem;
-        border-radius: 8px;
+        border-radius: 0.8rem;
         display: flex;
         align-items: flex-start;
         gap: 1rem;
+      }
+
+      .workforce-container::before {
+        position: absolute;
+        content: "";
+        background: url(/images/confetti.svg);
+        width: 10rem;
+        height: 10rem;
+        bottom: 360px;
+        left: 300px;
       }
 
       .workforce-container > h2 {
@@ -225,12 +213,12 @@
         width: 28.4rem;
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 8px;
-        transition: background-size 2s ease-in-out;
+        border-radius: 0.8rem;
+        transition: background-size 1s ease-out;
       }
 
       .product-container:hover {
-        background-size: 150%;
+        background-size: 160%;
       }
 
       .smaller-container {
@@ -245,8 +233,8 @@
       }
 
       .sweater-container {
-        height: 25rem;
         background-image: url("images/sweater.jpg");
+        height: 25rem;
       }
 
       .jacket-container {
@@ -262,7 +250,7 @@
         padding: 1rem;
         margin: 0 1.6rem 1.6rem;
         background-color: var(--text-white);
-        border-radius: 5px;
+        border-radius: 0.5rem;
       }
 
       .product-description {
@@ -286,34 +274,6 @@
       .product-price {
         font-size: 1.8rem;
         font-weight: lighter;
-      }
-
-      footer {
-        margin: 4rem auto 0 auto;
-        width: 50rem;
-      }
-
-      .footer-link {
-        width: 20rem;
-        margin: 0;
-        display: flex;
-        align-items: center;
-      }
-
-      .footer-link > a {
-        margin: 0;
-        text-decoration: none;
-        color: var(--text-black);
-      }
-
-      .footer-link:hover {
-        background-color: var(--hover-gray);
-      }
-
-      .footer-link > img {
-        margin: 0;
-        width: 3.2rem;
-        height: 3.2rem;
       }
     </style>
   </head>
