@@ -43,6 +43,7 @@
         max-width: 1200px;
         margin: 0 auto;
       }
+
       p {
         margin: 0;
       }
@@ -56,18 +57,75 @@
       }
 
       ul {
+        margin: 0;
         list-style: none;
         display: flex;
-        gap: 4rem;
+        gap: 4.1rem;
       }
 
-      li > a {
+      nav > ul > li > a {
         text-decoration: none;
         font-size: 1.6rem;
         color: var(--text-black);
         text-transform: uppercase;
+        position: relative;
       }
 
+      nav > ul > li > a::before {
+        position: absolute;
+        content: "";
+      }
+      nav > ul > li > a.active::before {
+        width: 35%;
+        height: 1px;
+        border-bottom: 2px solid black;
+        bottom: -6px;
+      }
+
+      a.inactive::before {
+        animation-duration: 1s;
+        animation-name: link-leave;
+        animation-fill-mode: forwards;
+      }
+
+      a.inactive:hover::before {
+        animation-duration: 1s;
+        animation-name: link-hover;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+      }
+
+      @keyframes link-hover {
+        from {
+          width: 0%;
+          height: 0;
+          border-bottom: 2px solid #8c8c8c;
+          bottom: -6px;
+        }
+
+        to {
+          width: 35%;
+          height: 1px;
+          border-bottom: 2px solid #8c8c8c;
+          bottom: -6px;
+        }
+      }
+
+      @keyframes link-leave {
+        from {
+          width: 35%;
+          height: 1px;
+          border-bottom: 2px solid #8c8c8c;
+          bottom: -6px;
+        }
+
+        to {
+          width: 0%;
+          height: 0;
+          border-bottom: 2px solid #8c8c8c;
+          bottom: -6px;
+        }
+      }
       .hero {
         display: flex;
         align-items: center;
@@ -267,10 +325,10 @@
         /></a>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#" class="inactive">Products</a></li>
+            <li><a href="#" class="inactive">Gallery</a></li>
+            <li><a href="#" class="inactive">Contact</a></li>
           </ul>
         </nav>
       </header>
