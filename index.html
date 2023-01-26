@@ -181,16 +181,6 @@
         gap: 1rem;
       }
 
-      .workforce-container::before {
-        position: absolute;
-        content: "";
-        background: url(/images/confetti.svg);
-        width: 10rem;
-        height: 10rem;
-        bottom: 360px;
-        left: 300px;
-      }
-
       .workforce-container > h2 {
         margin: 0;
         font-size: 3.2rem;
@@ -214,11 +204,6 @@
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0.8rem;
-        transition: background-size 1s ease-out;
-      }
-
-      .product-container:hover {
-        background-size: 160%;
       }
 
       .smaller-container {
@@ -274,6 +259,76 @@
       .product-price {
         font-size: 1.8rem;
         font-weight: lighter;
+      }
+
+      @media screen and (max-width: 420px) {
+        body {
+          min-width: 100%;
+        }
+
+        .wrapper {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+
+        header {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          gap: 1rem;
+        }
+
+        .hero {
+          margin: 1rem 0;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .heading > h1 {
+          text-align: center;
+        }
+
+        .heading > p {
+          margin: 2rem 1rem;
+          text-align: justify;
+        }
+
+        .actions {
+          margin: 0 1rem;
+          justify-content: center;
+          gap: 1rem;
+        }
+
+        .actions > a {
+          text-align: center;
+          font-size: 1.4rem;
+        }
+
+        .workforce-container {
+          padding: 2rem;
+          margin: 0 1rem;
+        }
+
+        .workforce-container > h2 {
+          font-size: 2.5rem;
+        }
+
+        .workforce-container > p {
+          font-size: 1.4rem;
+        }
+
+        .product-images {
+          flex-direction: column;
+        }
+
+        .product-container {
+          width: 32rem;
+        }
       }
     </style>
   </head>
