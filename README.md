@@ -15,7 +15,7 @@ I've had no part in the creation of the design, I've just tried to translate the
 
 Here is the link to the GitHub Pages: [Fauxica Sports - Home Page](https://helderzack.github.io/ui-ux-design-course)
 
-Link to thr Figma Design: [Fauxica Sports Figma Design](https://www.figma.com/file/VfpjSqC4pfkVOIkfQ9jVW1/Fauxica-Sports---UX%2FUI-Design-Course?node-id=0%3A1&t=2KGZTOzygchEWwJ3-1).
+Link to the Figma Design: [Fauxica Sports Figma Design](https://www.figma.com/file/VfpjSqC4pfkVOIkfQ9jVW1/Fauxica-Sports---UX%2FUI-Design-Course?node-id=0%3A1&t=2KGZTOzygchEWwJ3-1).
 
 Link to the UI/UX Crash Course: [The UI/UX Crash Course for 2023 - Learn UI/UX](https://www.youtube.com/watch?v=QwSN4n2sjR8).
 
